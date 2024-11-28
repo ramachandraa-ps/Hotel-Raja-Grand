@@ -422,22 +422,28 @@ nav {
     box-shadow: 0 4px 6px var(--shadow-color);
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.room-card .card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .room-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 24px var(--shadow-color);
-}
-
-.room-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: all 0.3s ease;
-}
-
-.room-card:hover img {
-    transform: scale(1.05);
 }
 
 .room-card h3 {
@@ -489,28 +495,33 @@ nav {
 
 .menu-card {
     background: var(--card-gradient);
-    backdrop-filter: blur(10px);
-    border-radius: 1rem;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 6px var(--shadow-color);
-    transition: all 0.3s ease;
     border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.menu-card .card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .menu-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 24px var(--shadow-color);
-}
-
-.menu-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: all 0.3s ease;
-}
-
-.menu-card:hover img {
-    transform: scale(1.05);
 }
 
 .menu-card h3 {
@@ -545,6 +556,50 @@ nav {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px var(--shadow-color);
     background: var(--secondary-gradient);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .room-grid,
+    .menu-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .room-card,
+    .menu-card {
+        margin: 0;
+        width: 100%;
+    }
+
+    .room-card img,
+    .menu-card img {
+        height: 200px;
+    }
+
+    .room-card .card-content,
+    .menu-card .card-content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .room-card,
+    .menu-card {
+        border-radius: 12px;
+    }
+
+    .room-card img,
+    .menu-card img {
+        height: 180px;
+    }
+
+    .room-card .card-content,
+    .menu-card .card-content {
+        padding: 0.875rem;
+    }
 }
 
 /* Menu Modal Styles */
