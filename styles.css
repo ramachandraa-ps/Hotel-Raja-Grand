@@ -1622,85 +1622,40 @@ input:checked + .slider:before {
     /* Enhanced Mobile Button Styles */
     .cta-button,
     .room-card .cta-button,
-    .menu-card .cta-button {
-        width: 80%;
-        margin: 0 auto;
+    .menu-card .cta-button,
+    .book-button {
+        width: 90%;
+        margin: 0.75rem auto;
         display: block;
         font-size: 0.9rem;
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
     }
 
-    .room-card,
-    .menu-card {
-        text-align: center;
+    .card-content {
+        padding: 0 0.5rem;
+    }
+
+    /* Price spacing */
+    .price {
+        margin: 0.5rem 0;
+        display: block;
     }
 }
 
 @media (max-width: 576px) {
+    .cta-button,
+    .room-card .cta-button,
+    .menu-card .cta-button,
+    .book-button {
+        width: 85%;
+        margin: 0.5rem auto;
+        padding: 0.7rem 1rem;
+    }
+
     .room-card,
     .menu-card {
-        padding: 1.25rem;
-        margin: 0.5rem 0;
-        width: 100%;
-    }
-
-    .room-card img,
-    .menu-card img {
-        height: 200px;
-        margin-bottom: 0.75rem;
-    }
-
-    .room-card h3,
-    .menu-card h3 {
-        font-size: 1.35rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .room-card p,
-    .menu-card p {
-        font-size: 0.95rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .price {
-        font-size: 1.35rem;
-        margin-bottom: 0.75rem;
-    }
-
-    /* Smaller screen button adjustments */
-    .cta-button,
-    .book-button,
-    .menu-button,
-    .submit-button {
-        padding: 0.875rem 1.25rem;
-        font-size: 1rem;
-        border-radius: 6px;
-        margin-top: 0.25rem;
-    }
-
-    /* Add extra touch padding for better mobile interaction */
-    .room-card,
-    .menu-card,
-    .cta-button,
-    .book-button,
-    .menu-button,
-    .submit-button {
-        touch-action: manipulation;
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    /* Improve contrast for better readability */
-    [data-theme="dark"] .room-card,
-    [data-theme="dark"] .menu-card {
-        background: var(--card-bg);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-    }
-
-    [data-theme="dark"] .cta-button,
-    [data-theme="dark"] .book-button,
-    [data-theme="dark"] .menu-button,
-    [data-theme="dark"] .submit-button {
-        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        padding: 0.75rem;
     }
 }
 
